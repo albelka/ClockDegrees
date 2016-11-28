@@ -5,7 +5,7 @@ using Nancy;
 using Nancy.Owin;
 using Nancy.ViewEngines.Razor;
 
-namespace NameSpace
+namespace ClockDegrees
 {
   public class Startup
   {

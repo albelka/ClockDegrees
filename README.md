@@ -13,7 +13,21 @@ _[Link to site.](https://levibibo.github.io/{site-name})_
 
 ##Specifications
 
-*{Specs}
+* _Description: Convert minutes to degrees _
+  _Input: 6 min_
+  _Output: 36 degrees_
+
+* _Description: Convert hours to degrees_
+  _Input: 1 hour_
+  _Output: 30 degrees_
+
+* _Description: Find difference between hour and minute degrees_
+  _Input: 1 hour and 6 minutes_
+  _Output: 6 degrees_
+
+* _Description: Find smallest distance between hands _
+  _Input: 11 hours and 0 minutes_
+  _Output: 30 degrees_
 
 ##Support and contact details
 

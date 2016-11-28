@@ -1,8 +1,8 @@
 using Nancy;
 using System.Collections.Generic;
-using NameSpace.Objects;
+using ClockDegrees.Objects;
 
-namespace NameSpace
+namespace ClockDegrees
 {
 	public class HomeModule : NancyModule
 	{
