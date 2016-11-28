@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace ClockDegrees.Objects
 {
@@ -6,7 +7,8 @@ namespace ClockDegrees.Objects
 	{
 		private int _hour;
 		private int _min;
-		private int _hourDegrees;
+		private int _hourDegreesClockwise;
+		private int _hourDegreesCounterClockwise;
 		private int _minDegrees;
 
 		public Clock(int hour, int min)
@@ -14,7 +16,8 @@ namespace ClockDegrees.Objects
 			_hour = hour;
 			_min = min;
 			_minDegrees = _min * 6;
-			_hourDegrees = (30 * _hour) + (_min / 2);
+			_hourDegreesClockwise = (30 * _hour) + (_min / 2);
+			_hourDegreesCounterClockwise = Math.Abs(_hourDegreesClockwise - 360);
 		}
 
 		public int GetMinDegrees()
@@ -22,14 +25,19 @@ namespace ClockDegrees.Objects
 			return _minDegrees;
 		}
 
-		public int GetHourDegrees()
+		public int GetHourDegreesClockwise()
 		{
-			return _hourDegrees;
+			return _hourDegreesClockwise;
+		}
+
+		public int GetHourDegreesCounterClockwise()
+		{
+			return _hourDegreesCounterClockwise;
 		}
 
 		public int FindShortestDistance()
 		{
-			return _hourDegrees;
+			return _hour;
 		}
 	}
 }

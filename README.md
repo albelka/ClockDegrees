@@ -17,8 +17,12 @@ _[Link to site.](https://levibibo.github.io/{site-name})_
   _Input: 6 min_
   _Output: 36 degrees_
 
-* _Description: Convert hours to degrees_
+* _Description: Convert hours to degrees counting clockwise_
   _Input: 1 hour_
+  _Output: 30 degrees_
+
+* _Description: Convert hours to degrees counting counter-clockwise_
+  _Input: 11 hour_
   _Output: 30 degrees_
 
 * _Description: Find difference between hour and minute degrees_
