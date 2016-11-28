@@ -1,20 +1,18 @@
-#{Project Title}
+#Clock hand counter
 ===========================
 
-_{Brief Details}, {Date}_
+_Find shortest distance between clock hands for a given time, November 28, 2016_
 
-_By Levi Bibo_
-
-##Description
-
-_{Extended Details}_
-
-_[Link to site.](https://levibibo.github.io/{site-name})_
+_By Levi Bibo and Anne Belka_
 
 ##Specifications
 
-* _Description: Convert minutes to degrees _
+* _Description: Convert minutes to degrees counting clockwise_
   _Input: 6 min_
+  _Output: 36 degrees_
+
+* _Description: Convert minutes to degrees counting counter clockwise_
+  _Input: 54 min_
   _Output: 36 degrees_
 
 * _Description: Convert hours to degrees counting clockwise_
@@ -25,24 +23,21 @@ _[Link to site.](https://levibibo.github.io/{site-name})_
   _Input: 11 hour_
   _Output: 30 degrees_
 
-* _Description: Find difference between hour and minute degrees_
-  _Input: 1 hour and 6 minutes_
-  _Output: 6 degrees_
+* _Description: find length of segments for counter clockwise hours and clockwise minutes_
+  _Input: 11 hours and 4 minutes_
+  _Output: 52 degrees_
 
-* _Description: Find smallest distance between hands _
-  _Input: 11 hours and 0 minutes_
-  _Output: 30 degrees_
+* _Description: find length of segments for clockwise hours and counter clockwise minutes_
+  _Input: 11 hours and 4 minutes_
+  _Output: 308 degrees_
 
-##Support and contact details
+* _Description: Find smallest distance between hands_
+  _Input: 11 hours and 4 minutes_
+  _Output: 52 degrees_
 
-Check out my GitHub account: [Levi Bibo.](https://www.github.com/levibibo)
-
-##Technologies used
-
-_This site was built using {technologies}_
 
 ##License
 
 _Created under an MIT license._
 
-_Copyright (c) {2016} Levi Bibo_
+_Copyright (c) {2016} Levi Bibo and Anne Belka_

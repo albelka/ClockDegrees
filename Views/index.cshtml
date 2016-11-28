@@ -8,10 +8,24 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					
+				<div class="col-lg-6">
+					<form action="/" method="post">
+						<label for="hour">Hours</label>
+						<input type="number" name="hour" placeholder="1" max="12", min="1">
+						<label for="minute">Minutes</label>
+						<input type="number" name="minute" placeholder="0" max="59", min="0">
+						<button type="submit" class="btn">Get the shortest segment in degrees</button>
+					</form>
 				</div>
 			</div>
+			@if (Model.Keys.Count > 0)
+			{
+				<div class="row">
+					<div class="col-lg-6">
+						<p>The shortest distance between the two hands is @Model["newClock"].FindShortestDistance() degrees</p>
+					</div>
+				</div>
+			}
 		</div>
 	</body>
 </html>

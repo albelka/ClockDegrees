@@ -10,7 +10,17 @@ namespace ClockDegrees
 		{
 			Get["/"] = _ =>
 			{
-				return View["index.cshtml"];
+				Dictionary<string, Clock> pageData = new Dictionary<string, Clock>();
+				return View["index.cshtml", pageData];
+			};
+			Post["/"] = _ =>
+			{
+				Dictionary<string, Clock> pageData = new Dictionary<string, Clock>();
+				int minutes = int.Parse(Request.Form["minute"]);
+				int hours = int.Parse(Request.Form["hour"]);
+				Clock newClock = new Clock(hours, minutes);
+				pageData["newClock"] = newClock;
+				return View["index.cshtml", pageData];
 			};
 		}
 	}
