@@ -13,12 +13,23 @@ namespace ClockDegrees.Objects
 		{
 			_hour = hour;
 			_min = min;
+			_minDegrees = _min * 6;
+			_hourDegrees = (30 * _hour) + (_min / 2);
+		}
+
+		public int GetMinDegrees()
+		{
+			return _minDegrees;
+		}
+
+		public int GetHourDegrees()
+		{
+			return _hourDegrees;
 		}
 
 		public int FindShortestDistance()
 		{
-			_minDegrees = _min * 6;
-			return _minDegrees;
+			return _hourDegrees;
 		}
 	}
 }
