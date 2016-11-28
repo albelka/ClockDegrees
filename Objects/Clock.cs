@@ -6,23 +6,23 @@ namespace ClockDegrees.Objects
 	public class Clock
 	{
 		private int _hour;
-		private int _min;
+		private int _minute;
 		private int _hourDegreesClockwise;
 		private int _hourDegreesCounterClockwise;
-		private int _minDegrees;
+		private int _minuteDegrees;
 
-		public Clock(int hour, int min)
+		public Clock(int hour, int minute)
 		{
 			_hour = hour;
-			_min = min;
-			_minDegrees = _min * 6;
-			_hourDegreesClockwise = (30 * _hour) + (_min / 2);
+			_minute = minute;
+			_minuteDegrees = _minute * 6;
+			_hourDegreesClockwise = (30 * _hour) + (_minute / 2);
 			_hourDegreesCounterClockwise = Math.Abs(_hourDegreesClockwise - 360);
 		}
 
-		public int GetMinDegrees()
+		public int GetMinuteDegrees()
 		{
-			return _minDegrees;
+			return _minuteDegrees;
 		}
 
 		public int GetHourDegreesClockwise()
@@ -38,6 +38,10 @@ namespace ClockDegrees.Objects
 		public int FindShortestDistance()
 		{
 			return _hour;
+		}
+		public int FindDistanceClockwise()
+		{
+			return Math.Abs(_hourDegreesClockwise-_minuteDegrees);
 		}
 	}
 }

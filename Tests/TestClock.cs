@@ -4,10 +4,10 @@ namespace ClockDegrees.Objects
   public class ClockTest
   {
     [Fact]
-    public void GetMinDegrees_FindMinDegrees_36()
+    public void GetMinuteDegrees_FindMinuteDegrees_36()
     {
       Clock newClock = new Clock(1, 6);
-      Assert.Equal(36, newClock.GetMinDegrees());
+      Assert.Equal(36, newClock.GetMinuteDegrees());
     }
     [Fact]
     public void GetHourDegreesClockwise_FindHourDegrees_30()
@@ -20,6 +20,12 @@ namespace ClockDegrees.Objects
     {
       Clock newClock = new Clock(11, 0);
       Assert.Equal(30, newClock.GetHourDegreesCounterClockwise());
+    }
+    [Fact]
+    public void GetDistanceClockwise_FindDinstanceClockwise_3()
+    {
+      Clock newClock = new Clock (1,6);
+      Assert.Equal(3, newClock.FindDistanceClockwise());
     }
   }
 }
